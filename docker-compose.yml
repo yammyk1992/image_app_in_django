@@ -12,9 +12,10 @@ services:
       - DB_USER=dbuser
       - DB_PASS=pass
 
+# docker-compose run --rm web-image_app sh -c "python manage.py createsuperuser"
 #    command:   ["python", "manage.py", "runserver", "0.0.0.0:8000"]
     command: >
-      sh -c "python manage.py migrate &&
+      sh -c "python manage.py makemigrations && python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
 
     depends_on:

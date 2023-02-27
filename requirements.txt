@@ -1,3 +1,6 @@
 Django==4.1.6
 djangorestframework==3.14.0
 psycopg2_binary==2.9.5
+Pillow==9.4.0
+django-imagekit==4.1.0
+pilkit~=2.0
